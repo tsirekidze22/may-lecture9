@@ -1,0 +1,165 @@
+.wrapper {
+  width: 500px;
+}
+/* 
+input {
+  width: 100%;
+  height: 54px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+} */
+
+input {
+  height: 54px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  /* padding-left: 24px;
+  padding-right: 54px; */
+  display: block;
+  outline: none;
+  width: 100%;
+}
+
+.checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  /* padding: 0px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .checkbox:checked::after {
+  content: url("../checkbox.svg");
+} */
+.checkbox:checked {
+  background-image: url("../checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  position: relative;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 1s linear;
+}
+
+.child:hover {
+  background-color: blueviolet;
+  transform: translate(-50%, -50%) rotate(45deg) scale(2);
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #ccc;
+  border-top-color: red;
+  border-radius: 50%;
+  animation-name: MySpinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation-duration: infinite; */
+  /* transition: 3s; */
+}
+
+@keyframes MySpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.space {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    #0a0a43,
+    rgb(15, 15, 90),
+    rgb(12, 12, 64),
+    rgb(14, 14, 75),
+    rgb(17, 17, 90),
+    rgb(4, 4, 34)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.jupiter {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(
+    #9d8e66,
+    #9d8e66,
+    #e8ecfd,
+    #ce986d,
+    #e6e4d5,
+    #9d8e66,
+    #9d8e66
+  );
+  position: relative;
+}
+
+.moon-orbit {
+  width: 350px;
+  height: 350px;
+  /* border: 2px dashed #ccc; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation-name: Moon;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 8s;
+}
+
+.moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  /* background: linear-gradient(
+    #9d8e66,
+    #9d8e66,
+    #e8ecfd,
+    #ce986d,
+    #e6e4d5,
+    #9d8e66,
+    #9d8e66
+  ); */
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
+
+@keyframes Moon {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
